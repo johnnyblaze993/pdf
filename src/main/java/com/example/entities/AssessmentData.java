@@ -2,7 +2,9 @@ package com.example.entities;
 
 import io.micronaut.data.annotation.Id;
 import io.micronaut.data.annotation.MappedEntity;
+import io.micronaut.core.annotation.Nullable;
 import jakarta.annotation.Nonnull;
+
 import java.math.BigDecimal;
 import java.sql.Date;
 import java.util.UUID;
@@ -19,30 +21,23 @@ public class AssessmentData {
     @Nonnull
     private UUID sysDataLabelId;
 
+    @Nullable
     private UUID compositionId;
 
+    @Nullable
     private BigDecimal numericData;
 
+    @Nullable
     private String textData;
 
+    @Nullable
     private UUID mediaId;
 
+    @Nullable
     private Date dateData;
 
+    @Nullable
     private UUID parentAssessmentDataId;
-
-    public AssessmentData(UUID assessmentDataId, UUID assessmentId, UUID sysDataLabelId, UUID compositionId,
-                          BigDecimal numericData, String textData, UUID mediaId, Date dateData, UUID parentAssessmentDataId) {
-        this.assessmentDataId = assessmentDataId;
-        this.assessmentId = assessmentId;
-        this.sysDataLabelId = sysDataLabelId;
-        this.compositionId = compositionId;
-        this.numericData = numericData;
-        this.textData = textData;
-        this.mediaId = mediaId;
-        this.dateData = dateData;
-        this.parentAssessmentDataId = parentAssessmentDataId;
-    }
 
     public UUID getAssessmentDataId() {
         return assessmentDataId;
@@ -116,6 +111,6 @@ public class AssessmentData {
         this.parentAssessmentDataId = parentAssessmentDataId;
     }
 
-
-     
+    // Constructor and getters/setters...
+    
 }
