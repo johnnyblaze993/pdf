@@ -3,7 +3,9 @@ micronaut:
     name: pdf
 datasources:
   default:
-    driver-class-name: org.postgresql.Driver
-    db-type: postgres
-    schema-generate: CREATE_DROP
+    url: jdbc:postgresql://localhost:5432/rimfirededb
+    driverClassName: org.postgresql.Driver
+    username: rimfirededb
+    password: magical_password
+    schema-generate: none
     dialect: POSTGRES
